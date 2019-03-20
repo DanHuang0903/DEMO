@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project 1</title>
+	 <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style/histogramStyle.css">
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="chrome-extension://aggiiclaiamajehmlfpkjmlbadmkledi/popup.js" async=""></script>
+        <script type="text/javascript" src="chrome-extension://aggiiclaiamajehmlfpkjmlbadmkledi/tat_popup.js" async=""></script>
+        <script type="text/javascript" src="src/relationship.js"></script>
+        
+</head>
+<body>
+	<div class="page-header" style="margin: 10px">
+		<h1> Dataset Infomation</h1>
+			<small>The clastering diagram shows the relationships among different datasets.</small><br>
+			<small>Click on the detailed information button to see more information</small>
+	</div>
+		<div class="container-fluid" style="margin-left: 10px;margin-right: 10px">
+			<div class="row" id="row1">
+				<div class="col-sm-2">
+					<ul class="nav nav-pills nav-stacked">
+						<li class="active"><a href="#">Overview</a></li>
+						<li><a href="#" id="size">Size</a></li>
+						<li><a href="#">Relationships</a></li>
+					</ul>
+				</div>
+
+				<div class="col-sm-9" style="border: 1px solid gray" id="show">
+					<p>Hover the nodes to see the relationships</p>
+				</div>
+				<div class="col-sm-1" id="pie"></div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(function(){
+				relationship("#show","#pie");
+			});
+		</script>
+</body>
+</html>
